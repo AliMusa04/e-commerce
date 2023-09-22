@@ -1,0 +1,60 @@
+.pageNotFound {
+    width: 100%;
+    background-color: #fff;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    &__content {
+        overflow: hidden;
+        height: 600px;
+        width: 800px;
+        position: relative;
+
+        a {
+            position: absolute;
+            top: 85%;
+            right: 5px;
+            padding: 15px 30px;
+            background-color: #4B1174;
+            color: white;
+            font-size: 22px;
+            font-weight: 600;
+            transition: .4s;
+            border-radius: 10px;
+
+            &:hover {
+                transform: scale(1.055);
+                transition: .4s;
+            }
+        }
+    }
+
+}
+
+@media(max-width: 1025px){
+    .pageNotFound {
+        &__content {
+            overflow: unset;
+            height: unset;
+            width: unset;
+        }
+    
+    }   
+}
+@media(max-width: 1025px){
+    .pageNotFound {
+        &__content {
+            overflow: unset;
+            height: unset;
+            width: unset;
+            a{
+                font-size: 14px;
+                padding: 10px 10px;
+                right: 30px;
+            }
+        }
+    
+    }   
+}

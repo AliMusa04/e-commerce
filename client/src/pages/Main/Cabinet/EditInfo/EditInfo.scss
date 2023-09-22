@@ -1,0 +1,103 @@
+.editInfo {
+    width: 100%;
+    position: relative;
+    min-height: 400px;
+    .form {
+        display: flex;
+        padding:  0 30px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        row-gap: 25px;
+        .errorMessage {
+            color: red;
+            font-size: 12px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 10%;
+        }
+
+        &__field {
+            position: relative;
+            cursor: pointer;
+            width: 45%;
+            display: flex;
+            align-items: center;
+            i{
+                position: absolute;
+                top: 0;
+                right: 0;
+                display: none;
+            }
+            &:hover{
+                i{
+                    display: block;
+                }
+            }
+            label{
+                font-weight: 600;
+            }
+            input {
+                border-radius: 10px;
+                padding: 4px 15px 0 5px;
+                width: 60%;
+                border: none;
+                cursor: pointer;
+
+                &:focus {
+                    outline: none;
+                    cursor: auto;
+                }
+            }
+
+        }
+        button{
+                margin: 20px 0 0 ;
+        }
+    }
+}
+
+@media(max-width: 852px){
+    .editInfo {
+        .form {
+            flex-direction: column;
+            &__field {
+                width: 100%;
+    
+            }
+            button{
+                width: fit-content;
+            }
+        }
+    }
+}
+@media(max-width: 682px){
+    .editInfo {
+        .form {
+            padding: 0 15px !important;
+        }
+    }
+}
+@media(max-width: 380px){
+    .editInfo {
+        .errorMessage {
+            right: 5% !important;
+            top:70% !important;
+        }
+
+        .form {
+            padding: 0 !important;
+            margin-top: 10px;
+            &__field{
+                flex-direction: column;
+                align-items: flex-start;
+                label{
+                    font-size: 14px;
+                }
+                input{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

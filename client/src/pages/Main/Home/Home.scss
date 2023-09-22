@@ -1,0 +1,265 @@
+.home {
+    padding-bottom: 30px;
+
+    .loading {
+        font-size: 52px;
+    }
+
+    &__wrapper {
+        padding-top: 30px;
+
+        &__carousel {
+            width: 100%;
+
+            .swiper {
+                height: 370px;
+                border-radius: 25px;
+
+                .swiper-slide {
+                    // width: 1225px !important;
+                    a {
+                        overflow: hidden;
+                        border-radius: 25px;
+
+                        img {
+                            border-radius: 25px;
+                            width: 100%;
+                        }
+                    }
+                }
+
+                .swiper-button-next,
+                .swiper-button-prev {
+                    background-color: white;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    opacity: .4;
+                    transition: .4s;
+                    top: 50%;
+                    transform: translateY(-50%);
+
+                    &::after {
+                        font-size: 20px !important;
+                        position: absolute;
+                        color: black;
+                    }
+
+                    &:hover {
+                        opacity: 1;
+                        transition: .4s;
+
+                        &::after {
+                            color: #CB11AB;
+                        }
+                    }
+                }
+
+                .swiper-pagination {
+                    .swiper-pagination-bullet {
+                        background-color: #CB11AB;
+                        color: #CB11AB;
+                        width: 11px;
+                        height: 11px;
+                    }
+                }
+            }
+
+        }
+
+        &__products {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            min-height: 100px;
+        }
+
+        &__text {
+            margin-top: 100px;
+
+            .content-css {
+                color: #8b8b8b;
+                position: relative;
+
+                span {
+                    line-height: 22px;
+                    font-size: 16px;
+                }
+
+                h3 {
+                    margin: 20px 0;
+                    font-weight: 700;
+                }
+
+                .topP {
+                    margin-top: 15px;
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: 30px;
+                    background-color: rgba(255, 255, 255, .8);
+                    height: 30px;
+                    width: 100%;
+                }
+
+                .show-more-less-clickable {
+                    display: block;
+                    text-decoration: none;
+                    margin-top: 20px;
+                    transition: .4s;
+                    color: #CB11AB;
+                    font-weight: 600;
+
+                    &:hover {
+                        text-decoration: dashed;
+                        transition: .4s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.contentBg {
+    border-radius: 25px;
+    background-color: white;
+}
+
+.sectionTtile {
+    margin: 50px 0 30px;
+    font-weight: 700;
+    color: #242424;
+    font-size: 24px;
+}
+
+@media(max-width: 1200px) {
+    .home {
+        &__wrapper {
+            &__carousel {
+                .swiper {
+                    height: 315px;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 1025px) {
+    .contentBg {
+        border-radius: 0;
+    }
+
+    .home {
+        &__wrapper {
+            &__carousel {
+                .swiper {
+                    height: unset;
+
+                    .swiper-button-next,
+                    .swiper-button-prev {
+                        top: 50%;
+                        transform: unset;
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 852px) {
+    .home {
+        padding-top: 30px;
+
+        &__wrapper {
+            &__salesmans {
+                justify-content: space-between;
+            }
+
+            &__salesmans {
+                justify-content: space-between;
+
+                &__salesman {
+                    width: 31% !important;
+                }
+            }
+        }
+    }
+
+    .container1500 {
+        padding: 0 15px !important;
+    }
+}
+
+@media(max-width: 682px) {
+    .home {
+        padding-top: 20px;
+
+        &__wrapper {
+            &__carousel {
+                .swiper {
+
+                    .swiper-button-next,
+                    .swiper-button-prev {
+                        width: 25px;
+                        height: 25px;
+                        transform: translateY(40%);
+
+                        &::after {
+                            font-size: 14px !important;
+                        }
+                    }
+
+                    .swiper-pagination {
+                        display: none;
+                    }
+                }
+            }
+
+            &__salesmans {
+                justify-content: space-between;
+                gap: 0 !important;
+                row-gap: 10px !important;
+                &__salesman {
+                    width: calc((100% - 8px)/ 2) !important;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 380px) {
+    .home {
+        padding-top: 20px;
+
+        &__wrapper {
+            &__carousel {
+                .swiper {
+                    .swiper-button-next,
+                    .swiper-button-prev {
+                        width: 18px;
+                        height: 18px;
+                        transform: translateY(50%);
+
+                        &::after {
+                            font-size: 12px !important;
+                        }
+                    }
+                }
+            }
+
+            &__salesmans {
+                margin-top: 20px !important;
+                gap: 0;
+                justify-content: space-between;
+
+                &__salesman {
+                    width: calc((100% - 8px)/ 2) !important;
+                }
+            }
+        }
+    }
+}
